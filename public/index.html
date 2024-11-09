@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Was sollen wir tun?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Was sollen wir tun?</h1>
+
+    <!-- Container für Session-Erstellung oder Beitritt -->
+    <div id="session-container">
+      <button id="create-session-btn" onclick="createSession()">Start</button>
+      <div id="join-session-container" class="visible">
+        <input type="text" id="session-id" placeholder="Enter Session ID to Join">
+        <br>
+        <button onclick="joinSession()">Join</button>
+      </div>
+    </div>
+
+    <!-- Container für die Kategoriewahl und Swipes -->
+    <div id="category-container" class="hidden">
+      <div id="category"></div>
+      <button onclick="swipe('yes')">Ja</button>
+      <button onclick="swipe('no')">Nein</button>
+    </div>
+
+    <!-- Container für die Anzeige der gemeinsamen Swipes -->
+    <div id="result-container" class="hidden">
+      <h2>Mutual Swipes</h2>
+      <ul id="mutual-list"></ul>
+      <button onclick="restart()">Restart</button>
+    </div>
+  
+    <div id="session-id-display" class="hidden">
+      <div id="show-session-id" style="font-size: 12px"></div>
+    </div>
+
+  </div>
+
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
